@@ -5,13 +5,13 @@ HTML/CSS/SCSS/Pug/webpackを使ってスタイリングを学ぶ
 ## 参考
 
 |...|...|
-|![book](./images/books.webp)|[HTML5&CSS3デザイン](https://ebisu.com/html5-css3-practical-design-guide-2/)|
-|![ebook1](./images/practice01-cover.webp)|[コーディングプラクティス1](https://ep.ebisu.com/practice01/)|
-|![ebook2](./images/practice02-cover.webp)|[コーディングプラクティス2](https://ep.ebisu.com/practice02/)|
-|![ebook3](./images/practice03-cover.webp)|[コーディングプラクティス3](https://ep.ebisu.com/practice03/)|
-|![ebook4](./images/practice04-cover.webp)|[コーディングプラクティス4](https://ep.ebisu.com/practice04/)|
-|![ebook5](./images/practice05-cover.webp)|[コーディングプラクティス5](https://ep.ebisu.com/practice05/)|
-|![ebook6](./images/practice06-cover.webp)|[コーディングプラクティス6](https://ep.ebisu.com/practice06/)|
+|![book](./images/books.webp)|[HTML5&CSS3デザイン](https://ebisu.com/html5-css3-practical-design-guide-2/ | width=100)|
+|![ebook1](./images/practice01-cover.webp)|[コーディングプラクティス1](https://ep.ebisu.com/practice01/ | width=100)|
+|![ebook2](./images/practice02-cover.webp)|[コーディングプラクティス2](https://ep.ebisu.com/practice02/ | width=100)|
+|![ebook3](./images/practice03-cover.webp)|[コーディングプラクティス3](https://ep.ebisu.com/practice03/ | width=100)|
+|![ebook4](./images/practice04-cover.webp)|[コーディングプラクティス4](https://ep.ebisu.com/practice04/ | width=100)|
+|![ebook5](./images/practice05-cover.webp)|[コーディングプラクティス5](https://ep.ebisu.com/practice05/ | width=100)|
+|![ebook6](./images/practice06-cover.webp)|[コーディングプラクティス6](https://ep.ebisu.com/practice06/ | width=100)|
 
 
 |<img alt="Gatsby" src="./images/books.webp" width="60"  alt="book"/>|[HTML5&CSS3デザイン](https://ebisu.com/html5-css3-practical-design-guide-2/)|
