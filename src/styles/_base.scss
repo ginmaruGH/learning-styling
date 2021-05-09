@@ -1,0 +1,24 @@
+// ====================================
+// フォントなど全体的なスタイルシート
+// ====================================
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: 1.4;
+  max-width: $page-width;
+  color: $font-color;
+  background: $background-color;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-feature-settings: "palt"; /* プロポーショナルメトリクスを有効に */
+}
