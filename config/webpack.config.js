@@ -1,0 +1,131 @@
+// const paths = require("./paths")
+const paths = require("./paths")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+
+const srcFullPath = paths.src
+const publicFullPath = paths.public
+
+module.exports = {
+  target: ["web", "es5"],
+  mode: "development",
+  devtool: "source-map",
+  entry: srcFullPath + "/scripts/index.js",
+  output: {
+    path: publicFullPath,
+    filename: "scripts/bundle-[name].js",
+    assetModuleFilename: "images/bundle-[name][ext]",
+    publicPath: "../",
+  },
+  resolve: {
+    extensions: [".ts", ".js", ".jsx", ".json"],
+    alias: {
+      "@": srcFullPath,
+      "@img": srcFullPath + "/images",
+    },
+    modules: [srcFullPath, "node_modules"],
+  },
+  plugins: [
+    new CleanWebpackPlugin({ verbose: true }),
+    new MiniCssExtractPlugin({
+      filename: "styles/[name].css",
+    }),
+    new HtmlWebpackPlugin({
+      title: "main-page",
+      filename: "contents/index.html",
+      favicon: srcFullPath + "/images/favicon.png",
+      template: srcFullPath + "/contents/index.pug",
+      scriptLoading: "defer",
+    }),
+    // new HtmlWebpackPlugin({
+    //   title: "sub-page",
+    //   filename: "contents/sub.html",
+    //   // template: paths.src + "/contents/sub.pug",
+    //   template: src + "/contents/sub.pug",
+    //   scriptLoading: "defer",
+    // }),
+  ],
+  module: {
+    rules: [
+      // Babel
+      // ==================================================
+      {
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+          },
+        ],
+      },
+      // Styles
+      // ==================================================
+      {
+        test: /\.(scss|sass|css)$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: "css-loader",
+            options: {
+              url: true,
+              importLoaders: 2,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [["autoprefixer", { grid: true }]],
+              },
+            },
+          },
+          {
+            loader: "sass-loader",
+          },
+        ],
+      },
+
+      // Images
+      // ==================================================
+      {
+        test: /\.(?:icon|gif|png|jpe?g)$/i,
+        type: "asset/resource",
+        // generator: {
+        //   filename: "images/bundle.[name][ext]",
+        // },
+        // type: "asset",
+        // parser: {
+        //   dataUrlCondition: {
+        //     maxSize: 100 * 1024, // 100KB
+        //   },
+        // },
+      },
+      // Fonts and Inline
+      // ==================================================
+      {
+        test: /\.(svg|eot|wof|woff2?|ttf|otf)$/i,
+        type: "asset/inline",
+      },
+      //--- HTML/pug
+      // ==================================================
+      {
+        // test: /\.html$/i,
+        test: /\.pug$/i,
+        use: [
+          {
+            loader: "html-loader",
+          },
+          {
+            loader: "pug-html-loader",
+            options: {
+              pretty: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
+};

@@ -35,7 +35,8 @@ aside {
   grid-row: 2 / 4;
 
   // 比較的容量の小さい画像を割り当てる
-  background: url("../images/image_small.jpg");
+  // background: url("~@/images/bk_image_small.jpg");
+  background: url("~@img/bk_image_small.jpg");
 }
 
 main {
@@ -45,7 +46,8 @@ main {
   flex-direction: column;
 
   // 比較的容量の大きい画像を割り当てる
-  background: url("../images/thumbnail_big.jpg");
+  // background: url("~@/images/bk_image_big.jpg");
+  background: url("~images/bk_image_big.jpg");
 }
 
 // main .main-back {

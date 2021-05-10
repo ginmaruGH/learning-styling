@@ -1,8 +1,15 @@
 @font-face {
   font-family: "Inter";
-  src: url(../fonts/Inter.ttf);
+  // src: url(~@/fonts/Inter.ttf);
+  src: url(~fonts/Inter.ttf);
 }
 
-@import "variables";
-@import "base";
-@import "grid";
+// @import "variables";
+// @import "base";
+// @import "grid";
+// @import "@/styles/variables";
+// @import "@/styles/base";
+// @import "@/styles/grid";
+@import "~styles/variables";
+@import "~styles/base";
+@import "~styles/grid";
