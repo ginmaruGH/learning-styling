@@ -1,8 +1,9 @@
-const paths = require("./paths")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const StylelintPlugin = require("stylelint-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
+const paths = require("./paths")
 // ~/src
 const srcFullPath = paths.src
 // ~/public
@@ -12,6 +13,8 @@ module.exports = {
   target: ["web", "es5"],
   mode: "development",
   devtool: "source-map",
+  // mode: "production",
+  // devtool: false,
   entry: srcFullPath + "/scripts/index.js",
   output: {
     path: publicFullPath,
@@ -32,11 +35,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles/[name].css",
     }),
+    new StylelintPlugin({
+      configFile: ".stylelintrc.json",
+      fix: true,
+    }),
     new HtmlWebpackPlugin({
       title: "main-page",
       filename: "contents/index.html",
-      // filename: "index.html",
-      // favicon: srcFullPath + "/images/favicon.png",
       template: srcFullPath + "/contents/index.pug",
       scriptLoading: "defer",
     }),
@@ -50,7 +55,6 @@ module.exports = {
   ],
   module: {
     rules: [
-
       // Babel
       // ==================================================
       {
@@ -66,7 +70,8 @@ module.exports = {
       // Styles
       // ==================================================
       {
-        test: /\.(scss|sass|css)$/i,
+        test: /\.(scss|css)$/i,
+        exclude: /node_modules/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -80,11 +85,6 @@ module.exports = {
           },
           {
             loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: [["autoprefixer", { grid: true }]],
-              },
-            },
           },
           {
             loader: "sass-loader",
@@ -122,9 +122,9 @@ module.exports = {
                 quality: [0.65, 0.9],
                 speed: 4,
               },
-              // gifsicle: {
-              //   interlaced: false,
-              // },
+              gifsicle: {
+                interlaced: false,
+              },
               // the webp option will enable WEBP
               webp: {
                 quality: 75,
