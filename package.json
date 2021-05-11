@@ -4,6 +4,7 @@
   "repository": "git@github.com:ginmaruGH/learning-styling.git",
   "author": "Ginmaru",
   "license": "MIT",
+  "private": true,
   "browserslist": [
     "defaults"
   ],
@@ -12,14 +13,24 @@
       "pre-commit": "lint-staged"
     }
   },
-  "lint-staged":{
-    "*.{js}": ["prettier --write", "eslint --fix"],
-    "*.{css, scss}": ["prettier --write", "stylelint --fix"]
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{css, scss}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ]
   },
   "scripts": {
     "dev": "webpack --mode development --config config/webpack.config.js",
     "build": "webpack --mode production --config config/webpack.config.js",
-    "watch": "webpack  --mode development --watch  --config config/webpack.config.js"
+    "serve": "webpack serve --open  --config config/webpack.config.js",
+    "dev-serve": "yarn run dev && yarn run serve"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
@@ -27,8 +38,6 @@
     "@babel/preset-env": "^7.14.1",
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
-    "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.4",
     "cssnano": "^5.0.2",
     "eslint": "^7.26.0",
@@ -56,9 +65,12 @@
     "stylelint-scss": "^3.19.0",
     "stylelint-webpack-plugin": "^2.1.1",
     "webpack": "^5.36.2",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.14.0"
+    "@babel/runtime-corejs3": "^7.14.0",
+    "jquery": "^3.6.0"
   }
 }

@@ -14,12 +14,13 @@ html(lang="ja")
   body
     div.my-grid
       header.my-grid-item
+        include templates/_menu.pug
         p ヘッダー
       aside.my-grid-item
         p サイドバー
       main.my-grid-item
         div#root
-        p メインコンテンツ
+        p メインコンテンツ(access.html)
         div.webpack
           img(src="~@img/webpack-logo.svg", width="100")
         div.small-img

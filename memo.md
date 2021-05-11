@@ -236,3 +236,11 @@ jQuery(1)
     - Prettier
     - 定義したフォーマットに自動的に整形してくれる。
     - コードの1行の長さを考慮して可読性が高くなるように変換してくれるなど。
+
+
+- webpack
+  - [DevServer](https://webpack.js.org/configuration/dev-server/)
+  - [webpack/webpack-dev-server](https://github.com/webpack/webpack-dev-server)
+  - [Development](https://webpack.js.org/guides/development/#choosing-a-development-tool)
+  - [Caching](https://webpack.js.org/guides/caching/#root)
+  - [Output](https://webpack.js.org/configuration/output/#outputchunkfilename)
