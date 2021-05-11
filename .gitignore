@@ -1,6 +1,6 @@
 # **/.DS_Store
 .DS_Store
-/node_modules
-/dist
-/public
+node_modules/
+dist/
+public/
 memo.md
