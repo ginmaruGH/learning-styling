@@ -8,7 +8,7 @@ html(lang="ja")
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    //- link(rel="icon" href="~@/images/favicon.png")
+    link(rel="icon" href="~@img/favicon.png")
     title <%= htmlWebpackPlugin.options.title %>
 
   body
@@ -21,11 +21,11 @@ html(lang="ja")
         div#root
         p メインコンテンツ
         div.webpack
-          img(src="~images/webpack-logo.svg", width="100")
+          img(src="~@img/webpack-logo.svg", width="100")
         div.small-img
           img(src="~@img/image_small.png", alt="")
         div.big-imag
-          img(src="~images/image_big.jpg", alt="")
+          img(src="~@img/image_big.jpg", alt="")
         div.main-back
         include _includes/_included.pug
       footer.my-grid-item

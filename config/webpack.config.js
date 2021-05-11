@@ -1,10 +1,11 @@
-// const paths = require("./paths")
 const paths = require("./paths")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
+// ~/src
 const srcFullPath = paths.src
+// ~/public
 const publicFullPath = paths.public
 
 module.exports = {
@@ -21,7 +22,7 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js", ".jsx", ".json"],
     alias: {
-      "@": srcFullPath,
+      // "@": srcFullPath,
       "@img": srcFullPath + "/images",
     },
     modules: [srcFullPath, "node_modules"],
@@ -34,7 +35,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "main-page",
       filename: "contents/index.html",
-      favicon: srcFullPath + "/images/favicon.png",
+      // filename: "index.html",
+      // favicon: srcFullPath + "/images/favicon.png",
       template: srcFullPath + "/contents/index.pug",
       scriptLoading: "defer",
     }),
@@ -48,6 +50,7 @@ module.exports = {
   ],
   module: {
     rules: [
+
       // Babel
       // ==================================================
       {
@@ -59,6 +62,7 @@ module.exports = {
           },
         ],
       },
+
       // Styles
       // ==================================================
       {
@@ -102,13 +106,41 @@ module.exports = {
         //     maxSize: 100 * 1024, // 100KB
         //   },
         // },
+        use: [
+          {
+            loader: "image-webpack-loader",
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 75,
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.9],
+                speed: 4,
+              },
+              // gifsicle: {
+              //   interlaced: false,
+              // },
+              // the webp option will enable WEBP
+              webp: {
+                quality: 75,
+              },
+            },
+          },
+        ],
       },
+
       // Fonts and Inline
       // ==================================================
       {
         test: /\.(svg|eot|wof|woff2?|ttf|otf)$/i,
         type: "asset/inline",
       },
+
       //--- HTML/pug
       // ==================================================
       {

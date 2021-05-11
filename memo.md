@@ -177,6 +177,7 @@ browser-sync-webpack-plugin
 React(2)
 react
 react-dom
+styled-components
 
 TypeScript(2)
 typescript ( TypeScript本体 )
@@ -201,3 +202,5 @@ jQuery(1)
 ## tips
 
 - [pugを使用して、imageを管理する](https://jackswim3411.hatenablog.com/entry/2020/08/30/003725)
+
+-[styled-componentsを使ったCSS設計](https://qiita.com/taneba/items/4547830b461d11a69a20)
