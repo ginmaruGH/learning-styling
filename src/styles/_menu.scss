@@ -4,9 +4,9 @@
   &__item {
     margin-right: 0.5em;
     a {
-      padding: 0.5em;
-      border-bottom: 4px solid #ddd;
       text-decoration: none;
+      border-bottom: 4px solid #ddd;
+      padding: 0.5em;
       &:hover {
         color: green;
       }

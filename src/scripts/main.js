@@ -1,6 +1,6 @@
-import { hello, example } from "scripts/sub"
-import "styles/main.scss"
-import webpackLogo from "images/webpack-logo2.svg"
+import { hello, example } from "@/scripts/sub"
+import webpackLogo from "@img/webpack-logo2.svg"
+import "@/styles/style.scss"
 
 
 console.log("JavaScript 変換成功")

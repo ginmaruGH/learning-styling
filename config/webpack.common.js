@@ -1,80 +1,78 @@
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const StylelintPlugin = require("stylelint-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const webpack = require("webpack")
+const { ProvidePlugin } = require("webpack")
 
-const paths = require("./paths")
-// ~/src
+const { paths } = require("./setting")
 const srcFullPath = paths.src
-// ~/public
-const publicFullPath = paths.public
 
-module.exports = {
+module.exports = ({ outputFileJS, outputFileCSS, assetFile }) => ({
   target: ["web", "es5"],
-  mode: "development",
-  devtool: "source-map",
-  // mode: "production",
-  // devtool: false,
-  entry: srcFullPath + "/scripts/index.js",
+  entry: {
+    site: paths.entryJS
+  },
   output: {
-    clean: true,
-    path: publicFullPath,
-    filename: "scripts/bundle-[name].js",
-    assetModuleFilename: "images/bundle-[name][ext]",
-    // publicPath: ""
+    filename: outputFileJS,
+    chunkFilename: outputFileJS,
+    assetModuleFilename: assetFile,
+    path: paths.pub,
+    publicPath: paths.publicPath,
+    // publicPath: "../", // no-local-server
+    clean: true
   },
   resolve: {
     extensions: [".ts", ".js", ".jsx", ".json"],
     alias: {
-      "@": srcFullPath,
-      "@img": srcFullPath + "/images"
+      "@": paths.src,
+      "@img": paths.src + "/images"
     },
-    modules: [srcFullPath, "node_modules"]
+    modules: [paths.src, "node_modules"]
   },
-  devServer: {
-    contentBase: publicFullPath,
-    historyApiFallback: true,
-    open: true,
-    overlay: true,
-    compress: true,
-    hot: true,
-    port: 8080,
-    watchOptions: {
-      ignored: /node_modules/
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      minSize: 0,
+      cacheGroups: {
+        defaultVendors: {
+          name: "vendors",
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true
+        },
+        fonts: {
+          name: "fonts",
+          test: /[\\/]src[\\/]fonts[\\/]/
+        },
+        default: false
+      }
     }
   },
   plugins: [
-    // new CleanWebpackPlugin({ verbose: true }),
-    new MiniCssExtractPlugin({
-      filename: "styles/[name].css"
+    new ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery",
+      utils: [paths.src + "/scripts/utils", "default"],
     }),
-    new StylelintPlugin({
-      configFile: ".stylelintrc.json",
-      fix: true
+    new MiniCssExtractPlugin({
+      filename: outputFileCSS
     }),
     new HtmlWebpackPlugin({
       template: srcFullPath + "/pages/index.pug",
       title: "main-page",
-      filename: "index.html",
-      publicPath: "./",
+      filename: "pages/index.html",
       scriptLoading: "defer"
     }),
     new HtmlWebpackPlugin({
       template: srcFullPath + "/pages/sub.pug",
       title: "sub-page",
       filename: "pages/sub.html",
-      publicPath: "../",
       scriptLoading: "defer"
     }),
     new HtmlWebpackPlugin({
       template: srcFullPath + "/pages/access.pug",
       title: "access-page",
       filename: "pages/access.html",
-      publicPath: "../",
       scriptLoading: "defer"
-    }),
-    new webpack.HotModuleReplacementPlugin()
+    })
   ],
   module: {
     rules: [
@@ -83,11 +81,7 @@ module.exports = {
       {
         test: /\.js$/i,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader"
-          }
-        ]
+        use: [{ loader: "babel-loader" }]
       },
 
       // Styles
@@ -96,12 +90,7 @@ module.exports = {
         test: /\.(scss|css)$/i,
         exclude: /node_modules/,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "../"
-            }
-          },
+          { loader: MiniCssExtractPlugin.loader },
           {
             loader: "css-loader",
             options: {
@@ -109,12 +98,8 @@ module.exports = {
               importLoaders: 2
             }
           },
-          {
-            loader: "postcss-loader"
-          },
-          {
-            loader: "sass-loader"
-          }
+          { loader: "postcss-loader" },
+          { loader: "sass-loader" }
         ]
       },
 
@@ -123,15 +108,6 @@ module.exports = {
       {
         test: /\.(?:icon|gif|png|jpe?g)$/i,
         type: "asset/resource",
-        // generator: {
-        //   filename: "images/bundle.[name][ext]",
-        // },
-        // type: "asset",
-        // parser: {
-        //   dataUrlCondition: {
-        //     maxSize: 100 * 1024, // 100KB
-        //   },
-        // },
         use: [
           {
             loader: "image-webpack-loader",
@@ -160,13 +136,19 @@ module.exports = {
         ]
       },
 
-      // Fonts and Inline
+      // Fonts and SVG
       // ==================================================
       {
-        test: /\.(svg|eot|wof|woff2?|ttf|otf)$/i,
+        test: /\.svg$/i,
         type: "asset/inline"
       },
-
+      {
+        test: /\.(eot|wof|woff2?|ttf|otf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "styles/fonts/[contenthash][ext]",
+        },
+      },
       //--- HTML/pug
       // ==================================================
       {
@@ -186,4 +168,4 @@ module.exports = {
       }
     ]
   }
-}
+})

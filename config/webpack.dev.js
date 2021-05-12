@@ -1,0 +1,42 @@
+const { merge } = require("webpack-merge")
+const webpack = require("webpack")
+
+const commonConfig = require("./webpack.common")
+const { dev, paths } = require("./setting")
+
+const outputFileJS = dev.output.filenameJS
+const outputFileCSS = dev.output.filenameCSS
+const assetFile = dev.output.assetFile
+console.log("assetFile: ")
+console.log(assetFile)
+const localhost = "http://localhost:"
+const port = 8080
+
+module.exports = () =>
+  merge(
+    commonConfig({
+      outputFileJS,
+      outputFileCSS,
+      assetFile
+    }),
+    {
+      mode: dev.mode,
+      devtool: dev.devtool,
+      devServer: {
+        contentBase: paths.pub,
+        contentBasePublicPath: localhost + port + "/",
+        publicPath: paths.publicPath,
+        index: dev.serverIndexHTML,
+        port: port,
+        open: true,
+        overlay: true,
+        compress: true,
+        hot: true,
+        historyApiFallback: true,
+        watchOptions: {
+          ignored: /node_modules/
+        }
+      },
+      plugins: [new webpack.HotModuleReplacementPlugin()]
+    }
+  )
