@@ -21,6 +21,4 @@ HTML/CSS/SCSS/pug/webpackを使ってスタイリングを学ぶ
 
 ## 目標
 
-上記資料を参考に、Sass/pud/webpackを利用し、1つのサイトにまとめCloudへUploadすることを目的にする。
-
 使用する画像には"Sample"スタンプを加工して貼りつける。

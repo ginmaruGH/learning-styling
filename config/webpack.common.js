@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { ProvidePlugin } = require("webpack")
 
 const { paths } = require("./setting")
-const srcFullPath = paths.src
 
-module.exports = ({ outputFileJS, outputFileCSS, assetFile }) => ({
+module.exports =
+  ({ outputFileJS, outputFileCSS, assetFile }) => ({
   target: ["web", "es5"],
   entry: {
     site: paths.entryJS
@@ -46,34 +46,34 @@ module.exports = ({ outputFileJS, outputFileCSS, assetFile }) => ({
       }
     }
   },
+
   plugins: [
     new ProvidePlugin({
       jQuery: "jquery",
       $: "jquery",
-      utils: [paths.src + "/scripts/utils", "default"],
+      utils: [paths.src + "/scripts/utils", "default"]
     }),
     new MiniCssExtractPlugin({
       filename: outputFileCSS
     }),
-    new HtmlWebpackPlugin({
-      template: srcFullPath + "/pages/index.pug",
-      title: "main-page",
-      filename: "pages/index.html",
-      scriptLoading: "defer"
-    }),
-    new HtmlWebpackPlugin({
-      template: srcFullPath + "/pages/sub.pug",
-      title: "sub-page",
-      filename: "pages/sub.html",
-      scriptLoading: "defer"
-    }),
-    new HtmlWebpackPlugin({
-      template: srcFullPath + "/pages/access.pug",
-      title: "access-page",
-      filename: "pages/access.html",
-      scriptLoading: "defer"
-    })
+    // htmlPluginConfig,
+    // new HtmlWebpackPlugin({
+    //   template: srcFullPath + "/pages/index.pug",
+    //   filename: "pages/index.html",
+    //   scriptLoading: "defer"
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: srcFullPath + "/pages/sub.pug",
+    //   filename: "pages/sub.html",
+    //   scriptLoading: "defer"
+    // }),
+    // new HtmlWebpackPlugin({
+    //   template: srcFullPath + "/pages/access.pug",
+    //   filename: "pages/access.html",
+    //   scriptLoading: "defer"
+    // })
   ],
+
   module: {
     rules: [
       // Babel
@@ -146,8 +146,8 @@ module.exports = ({ outputFileJS, outputFileCSS, assetFile }) => ({
         test: /\.(eot|wof|woff2?|ttf|otf)$/i,
         type: "asset/resource",
         generator: {
-          filename: "styles/fonts/[contenthash][ext]",
-        },
+          filename: "styles/fonts/[contenthash][ext]"
+        }
       },
       //--- HTML/pug
       // ==================================================

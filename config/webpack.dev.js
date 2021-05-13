@@ -1,20 +1,20 @@
 const { merge } = require("webpack-merge")
 const webpack = require("webpack")
-
-const commonConfig = require("./webpack.common")
+const webpackCommon = require("./webpack.common")
+const pages = require("./webpack.sub")
 const { dev, paths } = require("./setting")
 
 const outputFileJS = dev.output.filenameJS
 const outputFileCSS = dev.output.filenameCSS
 const assetFile = dev.output.assetFile
-console.log("assetFile: ")
-console.log(assetFile)
+
 const localhost = "http://localhost:"
 const port = 8080
 
 module.exports = () =>
   merge(
-    commonConfig({
+    pages,
+    webpackCommon({
       outputFileJS,
       outputFileCSS,
       assetFile

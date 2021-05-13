@@ -30,7 +30,8 @@
     "dev": "webpack --mode development --config config/webpack.dev.js",
     "build": "webpack --mode production --config config/webpack.prod.js",
     "serve": "webpack serve --open  --config config/webpack.dev.js",
-    "dev-serve": "yarn run dev && yarn run serve"
+    "dev-serve": "yarn run dev && yarn run serve && webpack --watch ",
+    "dev-watch": "webpack --watch --config config/webpack.dev.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
