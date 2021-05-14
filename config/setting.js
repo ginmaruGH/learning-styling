@@ -1,7 +1,7 @@
 const path = require("path")
-const src = path.resolve(__dirname, "../src")
-const pub = path.resolve(__dirname, "../public")
-const publicPath = "/"
+
+const srcDir = "../src"
+const publicDir = "../public"
 
 const entryJS = "/scripts/main.js"
 const serverIndexHTML = "pages/index.html"
@@ -13,6 +13,10 @@ const devAssetFile = "images/[name].bundle[ext]"
 const prodOutputJS = "scripts/[name].[chunkhash].js"
 const prodOutputCSS= "styles/[name].[chunkhash].css"
 const prodAssetFile = "images/[contenthash][ext]"
+
+const src = path.resolve(__dirname, srcDir)
+const pub = path.resolve(__dirname, publicDir)
+const publicPath = "/"
 
 exports.paths = {
   src: src,
