@@ -24,18 +24,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: paths.src + "/pages/index.pug",
-      filename: "pages/index.html",
+      filename: "index.html",
       scriptLoading: "defer"
     }),
-    new HtmlWebpackPlugin({
-      template: paths.src + "/pages/sub.pug",
-      filename: "pages/sub.html",
-      scriptLoading: "defer"
-    }),
-    new HtmlWebpackPlugin({
-      template: paths.src + "/pages/access.pug",
-      filename: "pages/access.html",
-      scriptLoading: "defer"
-    })
+    // new HtmlWebpackPlugin({
+    //   template: paths.src + "/pages/company.pug",
+    //   filename: "company.html",
+    //   scriptLoading: "defer"
+    // }),
   ]
 }

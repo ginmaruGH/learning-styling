@@ -1,6 +1,6 @@
 const { merge } = require("webpack-merge")
 const commonConfig = require("./webpack.common")
-const pages = require("./webpack.sub")
+const pages = require("./webpack.pages")
 const { prod } = require("./setting")
 
 const outputFileJS = prod.output.filenameJS

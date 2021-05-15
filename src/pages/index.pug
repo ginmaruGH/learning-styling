@@ -1,31 +1,30 @@
-doctype html
-html(lang="ja")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="icon" href="~@img/favicon.png")
-    title Index
+extends ./components/_layout.pug
 
-  body
-    div.my-grid
-      header.my-grid-item
-        include ./templates/_menu.pug
-        p ヘッダー
-      aside.my-grid-item
-        p サイドバー
-      main.my-grid-item
-        div#root
-        p メインコンテンツ (Index.html)
-        div.webpack
-          img(src="~@img/webpack-logo.svg" width="100")
-        div.small-img
-          img(src="~@img/image_small.png" alt="")
-        div.big-imag
-          img(src="~@img/image_big.jpg" alt="")
-        div.main-back
-        include ./_includes/_included.pug
-      footer.my-grid-item
-        p フッター
+block vars
+  include ./config/_config.pug
+
+  - var key = "top"
+  - var page = {}
+
+  if key !== "top"
+    - page = pages[key]
+
+block contents
+
+  section.hero
+    h1 ワークスペースの施工・デザイン設計
+
+  section.msg
+    h2 ご自宅からオフィスまで
+
+  section.systems
+    h2 人気の設計システム
+    h3 環境にあわせたオリジナル設計
+    h3 業務の効率化と課題解決
+    h3 高速でセキュアなネットワーク
+
+  section.msg
+    h2 設計やお見積りのご相談
 
 
 

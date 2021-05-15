@@ -1,0 +1,21 @@
+// Fonts
+// 基本: 閲覧環境にあるゴシック系フォント
+// 見出し: Noto Sans CJK JP (Bold, Black)
+// 欧文: Montserrat (Regular, Bold)
+
+$font-family-base: sans-serif;
+$font-family-title: "Noto Sans JP", sans-serif;
+$font-family-en: "Montserrat", sans-serif;
+
+// Colors
+$color-primary: "#71a9aa";
+$color-accent: "#f1a816";
+$color-dark-accent: "#ea8c06";
+$color-gray: "#888888";
+$color-middle-gray: "#666666";
+$color-black: "#222222";
+$color-white: "#ffffff";
+
+// Page Width
+$max-width: 1088px;
+$article-max-width: 720px

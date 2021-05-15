@@ -1,0 +1,18 @@
+@forward "../config/styling";
+@use "../config/styling" as v;
+
+// 基本：フォント
+body {
+  font-family: v.$font-family-base;
+  color: v.$color-white;
+}
+
+// Reset, Normalize, Sanitize
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

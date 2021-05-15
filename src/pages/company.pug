@@ -1,0 +1,22 @@
+extends ./components/_layout.pug
+
+block vars
+  include ./config/_config.pug
+
+  - var key = "company"
+  - var page = {}
+
+  if key !== "top"
+    - page = pages[key]
+
+block contents
+
+  section.heading
+
+  section.content
+    h1 セキュアで快適な環境構築をお手伝いします
+    h2 日常のなかにワークスペースを作り出します
+    h2 オープンスペースを作るのもおまかせください
+
+  section.msg
+    h2 いつでもお気軽にお問い合わせください

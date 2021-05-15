@@ -1,0 +1,31 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="icon" href="~@img/favicon.png")
+    title Index
+
+  body
+    div.my-grid
+      header.my-grid-item
+        include ./templates/_menu.pug
+        p ヘッダー
+      aside.my-grid-item
+        p サイドバー
+      main.my-grid-item
+        div#root
+        p メインコンテンツ (Index.html)
+        div.webpack
+          img(src="~@img/webpack-logo.svg" width="100")
+        div.small-img
+          img(src="~@img/image_small.png" alt="")
+        div.big-imag
+          img(src="~@img/image_big.jpg" alt="")
+        div.main-back
+        include ./_includes/_included.pug
+      footer.my-grid-item
+        p フッター
+
+
+

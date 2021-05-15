@@ -1,21 +1,26 @@
 const path = require("path")
 
+// Development
 const srcDir = "../src"
-const publicDir = "../public"
-
-const entryJS = "/scripts/main.js"
-const serverIndexHTML = "pages/index.html"
-
+const src = path.resolve(__dirname, srcDir)
 const devOutputJS = "scripts/[name].bundle.js"
 const devOutputCSS = "styles/[name].bundle.css"
 const devAssetFile = "images/[name].bundle[ext]"
 
+// Production
+const publicDir = "../public"
+const pub = path.resolve(__dirname, publicDir)
 const prodOutputJS = "scripts/[name].[chunkhash].js"
 const prodOutputCSS= "styles/[name].[chunkhash].css"
 const prodAssetFile = "images/[contenthash][ext]"
 
-const src = path.resolve(__dirname, srcDir)
-const pub = path.resolve(__dirname, publicDir)
+// Index JS-File
+const entryJS = "/scripts/main.js"
+
+// Local-server Index HTML-File
+const serverIndexHTML = "pages/index.html"
+
+// Local Public Path
 const publicPath = "/"
 
 exports.paths = {

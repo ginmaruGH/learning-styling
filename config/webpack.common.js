@@ -51,7 +51,7 @@ module.exports =
     new ProvidePlugin({
       jQuery: "jquery",
       $: "jquery",
-      utils: [paths.src + "/scripts/utils", "default"]
+      utils: [paths.src + "/scripts/_utils", "default"]
     }),
     new MiniCssExtractPlugin({
       filename: outputFileCSS
