@@ -1,0 +1,107 @@
+@use "../config/styling" as v;
+
+// Header and Footer
+// --------------------------------------------------------
+.header, .footer {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: v.$max-width;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+
+    .inner01, .inner02 {
+      text-align: right;
+    }
+  }
+}
+
+.header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    margin-top: 43px;
+    margin-bottom: 44px;
+  }
+
+  .nav {
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 12px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+      font-size: 16px;
+    }
+  }
+}
+
+.footer {
+  margin-top: 36px;
+  margin-bottom: 36px;
+
+  .nav {
+    margin-top: 35px;
+    font-size: 11px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+      font-size: 12px;
+    }
+  }
+}
+
+.site {
+  font-family: v.$font-family-en;
+  font-size: 24px;
+  font-weight: v.$font-weight-bold;
+}
+
+// Navigation Menu
+// --------------------------------------------------------
+.nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  a:hover {
+    color: v.$color-dark-accent;
+  }
+
+  a:not(:last-child) {
+    margin-right: 20px;
+
+    @media (min-width: 768px) {
+      margin-right: 40px;
+    }
+  }
+}
+
+// Address
+// --------------------------------------------------------
+.address {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+// Copy Right
+// --------------------------------------------------------
+.copy {
+  font-size: 11px;
+  margin-top: 11px;
+  margin-bottom: 0;
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}

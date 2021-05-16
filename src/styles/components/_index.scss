@@ -1,0 +1,182 @@
+@use "../config/styling" as v;
+
+// Hero Header
+// --------------------------------------------------------
+.hero {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: v.$max-width;
+    margin: 0 auto 74px;
+    padding: 0 20px;
+  }
+  img {
+    width: 100%;
+    height: 434px;
+    object-fit: cover;
+
+    @media (min-width: 768px) {
+      height: 100%;
+    }
+  }
+  .text {
+    margin: -65px 20px 74px;
+
+    @media (min-width: 768px) {
+      flex: 0 0 485px;
+      margin: 110px 0 39px;
+      margin-right: -139px;
+    }
+  }
+  h1 {
+    margin-top: 21px;
+    margin-bottom: 0;
+
+    br {
+      display: inline;
+    }
+  }
+  p {
+    font-size: 12px;
+    font-weight: v.$font-weight-bold;
+    color: v.$color-middle-gray;
+    margin-top: 26px;
+    margin-bottom: 0;
+
+    @media (min-width: 768px) {
+      font-size: 18px;
+      margin-top: 43px;
+    }
+  }
+  .btn {
+    margin-top: 26px;
+    margin-bottom: 0;
+
+    @media (min-width: 768px) {
+      margin-top: 43px;
+    }
+  }
+}
+
+// Message Top
+// --------------------------------------------------------
+.msg.msgtop {
+  margin-bottom: 74px;
+  padding: 110px 20px;
+  background-image: url(~@img/plan.jpg);
+
+  @media (min-width: 768px) {
+    box-sizing: border-box;
+    max-width: v.$max-width;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 110px;
+    padding-right: 56px;
+
+    h2,
+    p {
+      max-width: 512px;
+      margin-right: 0;
+      margin-left: auto;
+      text-align: left;
+    }
+  }
+}
+
+// Popular System
+// --------------------------------------------------------
+.systems {
+  margin-bottom: 74px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    max-width: v.$max-width;
+    margin: 0 auto 110px;
+  }
+  h2 {
+    margin-top: 18px;
+    margin-bottom: 66px;
+    font-weight: v.$font-weight-black;
+
+    @media (min-width: 768px) {
+      margin-bottom: 72px;
+    }
+  }
+  .systems-item {
+    @media (min-width: 768px) {
+        display: flex;
+        align-items: center;
+
+        figure {
+          flex: 0 0 307px;
+        }
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+
+          .text {
+            margin-left: 12%;
+            margin-right: 40px;
+          }
+        }
+      }
+    &:not(:last-child) {
+      margin-bottom: 54px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 47px;
+      }
+    }
+    img {
+      width: 82px;
+      border: 8px solid v.$color-circle;
+      border-radius: 50%;
+      box-sizing: border-box;
+
+      @media (min-width: 768px) {
+        width: 100%;
+      }
+    }
+    .subtitle {
+      margin-top: 31px;
+      margin-bottom: 0;
+      font-weight: normal;
+      color: v.$color-gray;
+
+      @media (min-width: 768px) {
+        margin-top: 0;
+        font-size: 14px;
+      }
+    }
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-family: v.$font-family-title;
+      font-size: 20px;
+      font-weight: v.$font-weight-bold;
+
+      @media (min-width: 768px) {
+        margin-top: 18px;
+        font-size: 24px;
+      }
+    }
+    .text {
+      @media (min-width: 768px) {
+        margin-left: 40px;
+        margin-right: 12%;
+        text-align: left;
+      }
+      p {
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-align: left;
+
+        @media (min-width: 768px) {
+          margin-top: 46px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

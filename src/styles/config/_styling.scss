@@ -8,14 +8,61 @@ $font-family-title: "Noto Sans JP", sans-serif;
 $font-family-en: "Montserrat", sans-serif;
 
 // Colors
-$color-primary: "#71a9aa";
-$color-accent: "#f1a816";
-$color-dark-accent: "#ea8c06";
-$color-gray: "#888888";
-$color-middle-gray: "#666666";
-$color-black: "#222222";
-$color-white: "#ffffff";
+$color-primary: #71a9aa;
+$color-accent: #f1a816;
+$color-dark-accent: #ea8c06;
+$color-gray: #888888;
+$color-middle-gray: #666666;
+$color-black: #222222;
+$color-white: #ffffff;
+$color-circle: #7fa9aa;
 
 // Page Width
 $max-width: 1088px;
-$article-max-width: 720px
+$article-max-width: 720px;
+
+// Font size
+$font-size-en: 14px;
+$font-size-en-pc: 18px;
+$font-weight-en: bold;
+
+$font-size-page-h1: 32px;
+$font-size-page-h1-pc: 48px;
+$font-size-page-h2: 22px;
+$font-size-page-h2-pc: 28px;
+$font-size-page-text: 14px;
+$font-size-page-text-pc: 18px;
+$font-weight-black: 900;
+$font-weight-bold: bold;
+$line-height-title: 1.5;
+$line-height-text: 1.8;
+
+
+
+
+
+
+// Top Page
+// h1
+// Noto Sans
+// 32px
+// 48px
+// Black
+
+// p
+// meiryo
+// 12px
+// 18px
+// Bold
+
+// h2
+// Noto Sans
+// 22px
+// 28px
+// Black
+
+// p
+// meiryo
+// 14px
+// 16px
+// Regular

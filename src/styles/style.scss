@@ -1,2 +1,135 @@
+@use "config/styling" as v;
+@use "components/base";
+@use "components/header_footer";
+@use "components/company";
+@use "components/index";
 
-@use "common/base" as b;
+// Content
+// --------------------------------------------------------
+.content {
+  margin: 36px 20px 74px;
+
+  @media (min-width: 768px) {
+    max-width: v.$article-max-width;
+    margin: 64px auto 90px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+// Title and Paragraph
+// --------------------------------------------------------
+h1 {
+  font-family: v.$font-family-title;
+  font-size: v.$font-size-page-h1;
+  font-weight: v.$font-weight-black;
+  line-height: v.$line-height-title;
+  margin-top: 21px;
+  margin-bottom: 52px;
+
+  @media (min-width: 768px) {
+    font-size: v.$font-size-page-h1-pc;
+    margin-bottom: 72px;
+  }
+  br {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: inline;
+    }
+  }
+}
+
+h2 {
+  font-family: v.$font-family-title;
+  font-size: v.$font-size-page-h2;
+  font-weight: v.$font-weight-bold;
+  line-height: v.$line-height-title;
+  margin-top: 60px;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    font-size: v.$font-size-page-h2-pc;
+    margin-top: 90px;
+  }
+}
+
+p {
+  font-size: v.$font-size-page-text;
+  line-height: v.$line-height-text;
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
+
+  @media (min-width: 768px) {
+    font-size: v.$font-size-page-text-pc;
+  }
+}
+
+.subtitle {
+  font-family: v.$font-family-en;
+  font-size: v.$font-size-en;
+  font-weight: v.$font-weight-en;
+  line-height: v.$line-height-title;
+  color: v.$color-primary;
+
+  @media (min-width: 768px) {
+    font-size: v.$font-size-en-pc;
+  }
+}
+
+// Button
+// --------------------------------------------------------
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 40px;
+  margin-top: 40px;
+  background-color: v.$color-accent;
+  color: v.$color-white;
+  font-size: 16px;
+
+  &:hover {
+    background-color: v.$color-dark-accent;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    padding: 10px 75px;
+  }
+}
+
+// Message Parts
+// --------------------------------------------------------
+.msg {
+  background-image: url(~@img/wall.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 92px;
+  padding-bottom: 92px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  color: v.$color-white;
+
+  h2 {
+    font-size: 24px;
+    margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 36px;
+    }
+  }
+  p {
+    font-size: 12px;
+    text-align: left;
+    max-width: 32.2em;
+    margin-top: 18px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}

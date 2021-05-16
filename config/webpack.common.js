@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { ProvidePlugin } = require("webpack")
 
 const { paths } = require("./setting")
@@ -16,7 +15,7 @@ module.exports =
     assetModuleFilename: assetFile,
     path: paths.pub,
     publicPath: paths.publicPath,
-    // publicPath: "../", // no-local-server
+    // publicPath: "./", // no-local-server
     clean: true
   },
   resolve: {
@@ -56,22 +55,6 @@ module.exports =
     new MiniCssExtractPlugin({
       filename: outputFileCSS
     }),
-    // htmlPluginConfig,
-    // new HtmlWebpackPlugin({
-    //   template: srcFullPath + "/pages/index.pug",
-    //   filename: "pages/index.html",
-    //   scriptLoading: "defer"
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: srcFullPath + "/pages/sub.pug",
-    //   filename: "pages/sub.html",
-    //   scriptLoading: "defer"
-    // }),
-    // new HtmlWebpackPlugin({
-    //   template: srcFullPath + "/pages/access.pug",
-    //   filename: "pages/access.html",
-    //   scriptLoading: "defer"
-    // })
   ],
 
   module: {
