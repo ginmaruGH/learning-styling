@@ -222,7 +222,8 @@ a {
     margin-bottom: 110px;
     padding-right: 56px;
   }
-  .msg.msgtop h2, .msg.msgtop p {
+  .msg.msgtop h2,
+.msg.msgtop p {
     max-width: 512px;
     margin-right: 0;
     margin-left: auto;
@@ -234,16 +235,47 @@ a {
   margin-bottom: 74px;
   padding-left: 20px;
   padding-right: 20px;
-  -moz-text-align-last: center;
-       text-align-last: center;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .systems {
+    margin: 0 auto 110px;
+    max-width: 1088px;
+  }
 }
 .systems h2 {
   margin-top: 18px;
   margin-bottom: 66px;
   font-weight: 900;
 }
+@media (min-width: 768px) {
+  .systems h2 {
+    margin-bottom: 72px;
+  }
+}
+@media (min-width: 768px) {
+  .systems .systems-item {
+    display: flex;
+    align-items: center;
+  }
+  .systems .systems-item figure {
+    flex: 0 0 307px;
+  }
+  .systems .systems-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .systems .systems-item:nth-child(even) .text {
+    margin-left: 12%;
+    margin-right: 40px;
+  }
+}
 .systems .systems-item:not(:last-child) {
   margin-bottom: 54px;
+}
+@media (min-width: 768px) {
+  .systems .systems-item:not(:last-child) {
+    margin-bottom: 47px;
+  }
 }
 .systems .systems-item img {
   border: 8px solid #7fa9aa;
@@ -251,11 +283,22 @@ a {
   border-radius: 50%;
   box-sizing: border-box;
 }
+@media (min-width: 768px) {
+  .systems .systems-item img {
+    width: 100%;
+  }
+}
 .systems .systems-item .subtitle {
   margin-top: 31px;
   margin-bottom: 0;
   font-weight: normal;
   color: #888888;
+}
+@media (min-width: 768px) {
+  .systems .systems-item .subtitle {
+    margin-top: 0;
+    font-size: 14px;
+  }
 }
 .systems .systems-item h3 {
   margin-top: 10px;
@@ -264,10 +307,29 @@ a {
   font-size: 20px;
   font-weight: bold;
 }
+@media (min-width: 768px) {
+  .systems .systems-item h3 {
+    margin-top: 18px;
+    font-size: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .systems .systems-item .text {
+    margin-left: 40px;
+    margin-right: 12%;
+    text-align: left;
+  }
+}
 .systems .systems-item .text p {
   margin-top: 20px;
   margin-bottom: 0;
   text-align: left;
+}
+@media (min-width: 768px) {
+  .systems .systems-item .text p {
+    margin-top: 46px;
+    font-size: 16px;
+  }
 }
 
 .content {
