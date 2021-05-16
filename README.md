@@ -23,4 +23,9 @@ HTML/CSS/SCSS/pug/webpackを使ってスタイリングを学ぶ
 
 ## 目標
 
-使用する画像には"Sample"スタンプを加工して貼りつける。
+- Pug/Sassの学習
+  - Pug/Sassを使い、テキストをもとにHTML/CSSファイルを作成
+
+- Gatsbyの利用
+  - 作成したHTML/CSSファイルをGatsby CloudにデプロイできるようにGatsbyを使って作り直す
+

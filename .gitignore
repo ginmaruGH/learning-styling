@@ -2,5 +2,8 @@
 .DS_Store
 /node_modules
 /dist
+/test
+/types
+/folder_templates
 memo.md
 yarn-error.log
