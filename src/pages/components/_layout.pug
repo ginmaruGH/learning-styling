@@ -5,13 +5,19 @@ block vars
 html(lang="ja")
 
   head
-    include ../templates/_head.pug
+    include ./_head.pug
 
-  body
+  body(class="page-grid")
     main
-      include ./_header.pug
-
       //- Pages contents
       block contents
 
-      include ./_footer.pug
+    include ./_navigation.pug
+
+    include ./_sns.pug
+
+    include ./_decoration.pug
+
+    include ./_footer.pug
+
+//- body::after(circled line)

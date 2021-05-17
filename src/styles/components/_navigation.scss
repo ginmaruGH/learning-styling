@@ -1,0 +1,84 @@
+@use "../config/config" as v;
+
+/* Navigation Button */
+/* -------------------------------------------------------- */
+.nav-button {
+  grid-column: 3;
+  grid-row: 1;
+  outline: none;
+  border: none;
+  background-color: v.$color-primary;
+  cursor: pointer;
+  z-index: 200;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 32px;
+    height: 4px;
+    background-color: v.$color-white;
+    transition: transform 0.5s;
+  }
+  &::before {
+    transform: translateY(-5px);
+  }
+  &::after {
+    transform: translateY(5px);
+  }
+}
+
+/* overlay */
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: v.$color-white;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  z-index: 100;
+
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 50px;
+
+  transform: scale(0, 0);
+  transform-origin: right top;
+  transition: transform 0.5s;
+}
+
+.open {
+  & html,
+  & body {
+    /* Prevention of scroll display */
+    height: 100%;
+    overflow: hidden;
+  }
+  .nav {
+    transform: scale(1, 1);
+  }
+  .nav-button {
+    &::before {
+      transform: translateY(2px) rotate(45deg);
+    }
+    &::after {
+      transform: translateY(-2px) rotate(-45deg);
+    }
+  }
+}
+
+@media (pointer: fine) and (hover: hover) {
+  html {
+    overflow-y: scroll;
+  }
+  .open html, .open body {
+    height: 100vh;
+  }
+}
+
+
+
+

@@ -15,7 +15,7 @@ const prodOutputCSS= "styles/[name].[chunkhash].css"
 const prodAssetFile = "images/[contenthash][ext]"
 
 // Index JS-File
-const entryJS = "/scripts/main.js"
+const entryJS = "scripts/main.js"
 
 // Local-server Index HTML-File
 const serverIndexHTML = "pages/index.html"
@@ -26,7 +26,7 @@ const publicPath = "/"
 exports.paths = {
   src: src,
   pub: pub,
-  entryJS: src + entryJS,
+  entryJS: src + "/" + entryJS,
   publicPath: publicPath,
 }
 

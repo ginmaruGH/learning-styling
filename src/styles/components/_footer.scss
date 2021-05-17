@@ -1,0 +1,49 @@
+@use "../config/config" as v;
+
+/* Footer */
+/* -------------------------------------------------------- */
+.footer.parts-grid {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  background-color: v.$color-black;
+  color: v.$color-white;
+  padding: 81px 0 86px;
+
+  & > * {
+    grid-row: 1;
+  }
+  .text {
+    .site {
+      font-size: 37px;
+      font-weight: bold;
+      margin-bottom: 35px;
+    }
+    .address {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+  .chat {
+    justify-self: end;
+    margin-top: -100px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: v.$color-primary;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+    img {
+      padding-bottom: 7px;
+    }
+  }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+@use "../config/config" as v;
+
+/* Decoration */
+/* -------------------------------------------------------- */
+.decoration {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
+  align-self: start;
+  margin-top: 257px;
+  // margin-bottom: 257px;
+  margin-left: 10px;
+  color: v.$color-gray;
+  font-size: 20px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  z-index: 10;
+
+  @media (min-width: 768px) {
+    justify-self: center;
+    margin-left: 0;
+  }
+}
+
+/* 丸の付いた直線 */
+body.page-grid::before,
+body.page-grid::after {
+
+  @media (min-width: 768px) {
+    content: "";
+    display: block;
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    background-color: v.$color-primary;
+    margin-top: 660px;
+    z-index: 10;
+  }
+}
+
+.page-grid::before {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.page-grid::after {
+  width: 1px;
+  min-height: 200px;
+}

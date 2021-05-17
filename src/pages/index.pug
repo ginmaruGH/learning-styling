@@ -1,0 +1,43 @@
+//- Index Page Main
+extends ./components/_layout.pug
+
+block vars
+  include ./config/_config.pug
+
+  - var key = "top"
+  - var page = {}
+
+  if key !== "top"
+    - page = pages[key]
+
+block contents
+  //- main
+  div(class="hero parts-grid")
+    h1(class="en") CASUAL
+    p(class="en") Outdoor Camping since 2001
+    figure
+      img(src="~@img/tent.jpg" alt="")
+
+  div(class="msg msg-black parts-grid")
+    figure
+      img(src="~@img/tent-green.jpg" alt="")
+    div(class="text")
+      h2 冒険をはじめる
+      p(class="text-subtitle en") Let's Start the Adventure
+      p(class="text-body") 冒険には準備が必要です。全部おまかせで行くもよし、道具を自分で揃えて楽しむもよし、最小限の装備で世界各地のサイトを巡ってみるのも捨てがたい・・・などなど、好みのスタイルで楽しめるのもポイントです。
+      a(class="text-link" href="contents.html") 詳しく見る ＞＞＞
+
+  div(class="msg msg-white parts-grid")
+    figure
+      img(src="~@img/fire.jpg" alt="")
+    div(class="text")
+      h2 カジュアルに体験する
+      p(class="text-subtitle en") Casual Outdoor Experience
+      p(class="text-body") 近年はアウトドアを楽しむために必要なものが全部用意されたサイトやフィールドも増えています。わからないことは優しいガイドさんが教えてくれますので、アレもコレもカジュアルに体験できるのです。
+      a(class="text-link" href="contents.html") 詳しく見る ＞＞＞
+
+
+
+
+
+

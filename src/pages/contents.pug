@@ -1,0 +1,44 @@
+//- Contents Page Main
+extends ./components/_layout.pug
+
+block vars
+  include ./config/_config.pug
+
+  - var key = "contents"
+  - var page = {}
+
+  if key !== "top"
+    - page = pages[key]
+
+block contents
+
+  div(class="head-image parts-grid")
+    div(class="site en") CASUAL
+    figure
+      img(src="~@img/tent-orange.jpg" alt="")
+
+  article(class="post parts-grid")
+    h1 ご案内
+    p 2001年にオンライン専門のキャンプサイトとしてオープンして以来、CASUALは独自の情報発信を行うアウトドア系メディアおよびポータルとしてご好評いただいております。本サイトを通じてアウトドアをより身近に感じていただければ幸いです。
+    p 数年前にはマイナーだったキャンプも、キャンプをテーマにしたYouTubeの動画配信やコミックの人気もあり、とても身近なものになっています。
+
+    div(class="gallery")
+      figure(class="photo-A")
+        img(src="~@img/camp-food.jpg" alt="")
+      figure(class="photo-B")
+        img(src="~@img/camp-sky.jpg" alt="")
+      figure(class="photo-C")
+        img(src="~@img/camp-fire.jpg" alt="")
+      figure(class="photo-D")
+        img(src="~@img/camp-table.jpg" alt="")
+
+    p 大勢で楽しむキャンプはもちろんのこと、一人で楽しむソロキャンプも人気です。気軽に行けるキャンプサイトや、手軽でかさばらない道具類、簡単に設営できるテントなど、アウトドアをサポートするもろもろが進化しているもの大きいと言えるでしょう。
+    p すべてを賄ってくれる「グランピング」という選択肢もあります。自分で食材を用意せず、出来合いのお惣菜やお弁当を持ち込んで自然を満喫するのも一興です。いろいろな楽しみ方、自分にあったスタイルを見つけてみてください。
+
+
+
+
+
+
+
+
