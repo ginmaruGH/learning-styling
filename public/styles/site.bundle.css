@@ -546,7 +546,7 @@ main {
   .msg.msg-white::after {
     height: 256px;
     margin-bottom: -150px;
-    margin-right: -113px;
+    margin-right: -187px;
   }
 }
 .msg figure {
