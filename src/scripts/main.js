@@ -1,5 +1,5 @@
+import "@fortawesome/fontawesome-free/js/all"
 import "@/styles/styles.scss"
-
 import "@/images/favicon32.png"
 import "@/images/plant.jpg"
 import "@/images/plant-bonsai.jpg"

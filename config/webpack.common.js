@@ -6,6 +6,9 @@ const { paths } = require("./setting")
 module.exports =
   ({ outputFileJS, outputFileCSS, assetFile }) => ({
   target: ["web", "es5"],
+  stats: {
+    children: true,
+  },
   entry: {
     site: paths.entryJS
   },

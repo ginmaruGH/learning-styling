@@ -2,89 +2,32 @@
 
 /* Index page */
 /* -------------------------------------------------------- */
+
 /* List */
 /* -------------------------------------------------------- */
-.list {
-  > .grid12 {
-    row-gap: 32px;
-
-    h2 + p {
-      margin-bottom: 8px;
-    }
-  }
-}
-
-/* List Inner Items */
-.list {
-  h2,
-  h2 + p {
-    @media (min-width: 768px) {
-      grid-column: span 8;
-    }
-  }
-  h2 {
-    font-family: v.$font-family-main;
-    font-size: 26px;
-    font-weight: 400;
-    color: v.$color-gray-deep;
-
-    @media (min-width: 768px) {
-      font-size: 32px;
-    }
-  }
-  h2 + p {
-    font-size: 14px;
-    line-height: 1.8;
-
-    @media (min-width: 768px) {
-      font-size: 16px;
-    }
-  }
-  ul.grid12 {
-    row-gap: 20px;
-
-    @media (min-width: 768px) {
-      row-gap: 28px;
-    }
-  }
-  ul {
-    img {
-      width: 100%;
-      height: 155px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 10px;
-
-      @media (min-width: 768px) {
-        height: 265px;
-      }
-    }
-    &.pc-col-3 {
-      img {
-        @media (min-width: 768px) {
-          height: 353px;
-        }
-      }
-    }
-    h3 {
-      font-family: v.$font-family-main;
-      font-size: 16px;
-      font-weight: 500;
-
-      @media (min-width: 768px) {
-        font-size: 18px;
-      }
-    }
-  }
-}
-
 /* Category */
 .list-category {
   padding-top: 80px;
   padding-bottom: 80px;
+  overflow: hidden;
 
   @media (min-width: 768px) {
     padding-bottom: 86px;
+  }
+  > .grid12 {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: url(~@img/sun.svg);
+      top: -80px;
+      right: -120px;
+      z-index: -1;
+
+      @media (min-width: 768px) {
+        right: 17px;
+      }
+    }
   }
 }
 
@@ -113,25 +56,4 @@
   }
 }
 
-/* Border */
-.frame {
-  border: 1px solid v.$color-blue-dark;
-  padding: 40px 15px;
-  margin: 0 -15px;
 
-  @media (min-width: 768px) {
-    padding: 60px 0;
-    margin: 0;
-  }
-  h2,
-  h2 + p {
-    @media (min-width: 768px) {
-      grid-column: 2 / span 7;
-    }
-  }
-  ul {
-    @media (min-width: 768px) {
-      grid-column: 2 / -2;
-    }
-  }
-}

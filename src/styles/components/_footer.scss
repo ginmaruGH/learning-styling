@@ -1,0 +1,58 @@
+@use "../config/config" as v;
+
+/* Footer */
+/* -------------------------------------------------------- */
+.footer.parts-grid {
+  background-color: v.$color-blue-light;
+  border-top: 1px solid v.$color-blue-medium;
+  padding: 80px 0;
+  row-gap: 74px;
+
+  @media (min-width: 768px) {
+    row-gap: 99px;
+  }
+  .footer-nav.grid12 {
+    row-gap: 40px;
+
+    h4 {
+      color: v.$color-gray-medium;
+      margin-bottom: 20px;
+    }
+    ul {
+      display: grid;
+      row-gap: 7px;
+    }
+  }
+  .footer-site.grid12 {
+    row-gap: 36px;
+
+    .profile {
+      p {
+        font-size: 12px;
+        margin-top: 15px;
+      }
+    }
+    .copyright {
+      @media (min-width: 768px) {
+        justify-self: end;
+        align-self: end;
+        text-align: right;
+      }
+      ul {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+        column-gap: 18px;
+        font-size: 12px;
+
+        @media (min-width: 768px) {
+          column-gap: 28px;
+        }
+      }
+      p {
+        font-size: 12px;
+        margin-top: 16px;
+      }
+    }
+  }
+}

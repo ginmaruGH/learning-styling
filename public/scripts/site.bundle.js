@@ -9,19 +9,22 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/styles/styles.scss */ "./src/styles/styles.scss");
-/* harmony import */ var _images_favicon32_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/images/favicon32.png */ "./src/images/favicon32.png");
-/* harmony import */ var _images_plant_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/images/plant.jpg */ "./src/images/plant.jpg");
-/* harmony import */ var _images_plant_bonsai_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/images/plant-bonsai.jpg */ "./src/images/plant-bonsai.jpg");
-/* harmony import */ var _images_plant_preserved_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/images/plant-preserved.jpg */ "./src/images/plant-preserved.jpg");
-/* harmony import */ var _images_plant_edible_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/images/plant-edible.jpg */ "./src/images/plant-edible.jpg");
-/* harmony import */ var _images_exp_online_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/images/exp-online.jpg */ "./src/images/exp-online.jpg");
-/* harmony import */ var _images_exp_subsc_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/images/exp-subsc.jpg */ "./src/images/exp-subsc.jpg");
-/* harmony import */ var _images_exp_gift_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/images/exp-gift.jpg */ "./src/images/exp-gift.jpg");
-/* harmony import */ var _images_item_a101_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/images/item-a101.jpg */ "./src/images/item-a101.jpg");
-/* harmony import */ var _images_item_ea201_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/images/item-ea201.jpg */ "./src/images/item-ea201.jpg");
-/* harmony import */ var _images_item_flower_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/images/item-flower.jpg */ "./src/images/item-flower.jpg");
-/* harmony import */ var _images_item_b100_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/images/item-b100.jpg */ "./src/images/item-b100.jpg");
+/* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/all */ "./node_modules/@fortawesome/fontawesome-free/js/all.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/styles/styles.scss */ "./src/styles/styles.scss");
+/* harmony import */ var _images_favicon32_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/images/favicon32.png */ "./src/images/favicon32.png");
+/* harmony import */ var _images_plant_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/images/plant.jpg */ "./src/images/plant.jpg");
+/* harmony import */ var _images_plant_bonsai_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/images/plant-bonsai.jpg */ "./src/images/plant-bonsai.jpg");
+/* harmony import */ var _images_plant_preserved_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/images/plant-preserved.jpg */ "./src/images/plant-preserved.jpg");
+/* harmony import */ var _images_plant_edible_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/images/plant-edible.jpg */ "./src/images/plant-edible.jpg");
+/* harmony import */ var _images_exp_online_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/images/exp-online.jpg */ "./src/images/exp-online.jpg");
+/* harmony import */ var _images_exp_subsc_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/images/exp-subsc.jpg */ "./src/images/exp-subsc.jpg");
+/* harmony import */ var _images_exp_gift_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/images/exp-gift.jpg */ "./src/images/exp-gift.jpg");
+/* harmony import */ var _images_item_a101_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/images/item-a101.jpg */ "./src/images/item-a101.jpg");
+/* harmony import */ var _images_item_ea201_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/images/item-ea201.jpg */ "./src/images/item-ea201.jpg");
+/* harmony import */ var _images_item_flower_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/images/item-flower.jpg */ "./src/images/item-flower.jpg");
+/* harmony import */ var _images_item_b100_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/images/item-b100.jpg */ "./src/images/item-b100.jpg");
+
 
 
 
@@ -168,7 +171,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1621306515489
+      // 1621358694290
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -255,6 +258,30 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	}();
 /******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
 /******/ 	/* webpack/runtime/get javascript update chunk filename */
 /******/ 	!function() {
 /******/ 		// This function allow to reference all chunks
@@ -280,7 +307,19 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "d8052c5b2eef282547a7"; }
+/******/ 		__webpack_require__.h = function() { return "93eea986b3addfc5b7c9"; }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	!function() {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
