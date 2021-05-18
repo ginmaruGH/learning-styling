@@ -1,177 +1,137 @@
 @use "../config/config" as v;
 
-/* Main Index*/
+/* Index page */
 /* -------------------------------------------------------- */
+/* List */
+/* -------------------------------------------------------- */
+.list {
+  > .grid12 {
+    row-gap: 32px;
 
-/* Hero Header */
-.hero {
-  background-color: v.$color-white;
-  & > * {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    justify-self: center;
+    h2 + p {
+      margin-bottom: 8px;
+    }
   }
-  h1, p {
-    line-height: 1;
-    color: v.$color-white;
-    mix-blend-mode: difference;
-    z-index: 2;
-  }
-  h1 {
-    font-size: 91px;
-    font-weight: bold;
-    margin-top: 30px;
+}
 
-    @media (max-width: 374px) {
-      font-size: 75px;
-    }
-    @media (min-width: 768px) and (max-width: 1023px) {
-      font-size: 160px;
-    }
-    @media (min-width: 1023px) {
-      font-size: 229px;
-      margin-top: 33px;
+/* List Inner Items */
+.list {
+  h2,
+  h2 + p {
+    @media (min-width: 768px) {
+      grid-column: span 8;
     }
   }
-  p {
-    font-size: 17px;
-    margin-top: 120px;
+  h2 {
+    font-family: v.$font-family-main;
+    font-size: 26px;
+    font-weight: 400;
+    color: v.$color-gray-deep;
 
-    @media (min-width: 768px) and (max-width: 1023px) {
-      font-size: 30.5px;
-      margin-top: 185px;
-    }
-    @media (min-width: 1023px) {
-      font-size: 44px;
-      margin-top: 251px;
+    @media (min-width: 768px) {
+      font-size: 32px;
     }
   }
-  figure {
+  h2 + p {
+    font-size: 14px;
+    line-height: 1.8;
+
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  ul.grid12 {
+    row-gap: 20px;
+
+    @media (min-width: 768px) {
+      row-gap: 28px;
+    }
+  }
+  ul {
     img {
-      width: 302px;
-      height: 506px;
+      width: 100%;
+      height: 155px;
       object-fit: cover;
-      margin: 63px 0 100px;
+      border-radius: 10px;
+      margin-bottom: 10px;
 
-      @media (min-width: 768px) and (max-width: 1023px) {
-        width: 395px;
-        height: 572.5px;
+      @media (min-width: 768px) {
+        height: 265px;
       }
-      @media (min-width: 1023px) {
-        width: 488px;
-        height: 639px;
-        margin: 84px 0 183px;
+    }
+    &.pc-col-3 {
+      img {
+        @media (min-width: 768px) {
+          height: 353px;
+        }
+      }
+    }
+    h3 {
+      font-family: v.$font-family-main;
+      font-size: 16px;
+      font-weight: 500;
+
+      @media (min-width: 768px) {
+        font-size: 18px;
       }
     }
   }
 }
 
-/* Message */
-.msg {
-  row-gap: 51px;
-  padding: 64px 0;
+/* Category */
+.list-category {
+  padding-top: 80px;
+  padding-bottom: 80px;
 
   @media (min-width: 768px) {
-    padding: 150px 0;
+    padding-bottom: 86px;
   }
+}
 
-  &::before {
-    content: "";
-    display: block;
-    width: 26px;
-    height: 27px;
-    background-color: v.$color-primary;
-    grid-row: 1;
-    z-index: 2;
-  }
-  &.msg-black {
-  color: v.$color-white;
-  background-color: v.$color-black;
+/* Experience */
+.list-experience {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: v.$color-green;
+}
 
-    img {
-      // object-position: left center;
-      object-position: left bottom;
-    }
-  }
-  &.msg-white{
-    &::before {
-      justify-self: end;
-    }
-    &::after {
-      content: "";
-      display: block;
-      height: 130px;
-      z-index: -1;
-      background-color: v.$color-primary;
-      opacity: 60%;
-      grid-column: 1;
-      grid-row: 1;
-      align-self: end;
-      margin-bottom: -25px;
-      margin-right: -110px;
+/* Popular */
+.list-popular {
+  padding-top: 40px;
+  padding-bottom: 40px;
 
-      @media (min-width: 768px) {
-        height: 256px;
-        margin-bottom: -150px;
-        margin-right: -187px;
-      }
-    }
+  @media (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
-  figure {
-    grid-row: 1;
+  ul p {
+    font-size: 16px;
 
     @media (min-width: 768px) {
-      grid-row: 1;
-      width: 44%;
-    }
-  }
-  img {
-    width: 100%;
-    height: 288px;
-    object-fit: cover;
-
-    @media (min-width: 768px) {
-      height: 100%;
-    }
-  }
-  .text {
-    @media (min-width: 768px) {
-      grid-row: 1;
-      width: 44%;
-      margin: 89px 0 49px;
-    }
-    h2 {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 14px;
-
-      @media (min-width: 768px) {
-        font-size: 36px;
-      }
-    }
-    .text-subtitle {
-      font-size: 20px;
-      color: v.$color-gray;
-      margin-bottom: 40px;
-    }
-    .text-body {
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 47px;
-    }
-    .text-link {
-      font-size: 16px;
-      font-weight: bold;
-      color: v.$color-primary;
+      font-size: 18px;
     }
   }
 }
 
-@media (min-width: 768px) {
-  .msg-black figure,
-  .msg-white .text {
-    justify-self: end;
+/* Border */
+.frame {
+  border: 1px solid v.$color-blue-dark;
+  padding: 40px 15px;
+  margin: 0 -15px;
+
+  @media (min-width: 768px) {
+    padding: 60px 0;
+    margin: 0;
+  }
+  h2,
+  h2 + p {
+    @media (min-width: 768px) {
+      grid-column: 2 / span 7;
+    }
+  }
+  ul {
+    @media (min-width: 768px) {
+      grid-column: 2 / -2;
+    }
   }
 }
-
-

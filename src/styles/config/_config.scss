@@ -1,51 +1,84 @@
-// フォント
-// 基本：ゴシック系フォント
-// 欧文：Josefin Sans (Regular, Bold)
-
-// 色
-// プライマリー：#98a718
-// ブラック：#000000
-// グレー：#aaaaaa
-// ホワイト：#ffffff
-
-// 備考1
-// ナビゲーションメニューは
-// フルスクリーン、オーバレイなし
-// 右上のボタンクリックから画面右上から開閉
-
-// 備考2
-// 共通パーツ
-// ナビゲーションボタン・フッター
-// SNSメニュー・縦書きテキスト・丸付きのライン（PC版のみ）
-
-// 備考3
-// 上左右ガイドライン：72px
-// 丸付きラインはメインコンテンツにあわせて長さ調整、フッタの上辺まで
-
-// 備考4
-// モバイル版左右余白：20px
-// PC版最大幅：1074px
-// ワンカラムレイアウト
-
-// 備考5
-// メインコンテンツと装飾パーツが重なる場合は装飾パーツが上になる
-
-// 備考6
-// 装飾パーツの緑の四角は常にページの左下に表示する形でレスポンシブにする
-
-// Size
-// Mobile: 375*812
-// PC: 1366*1024
-
-// Variables
+// レスポンシブ
 // --------------------------------------------------------
+// breakpoint: 768px
 
 // Fonts
-$font-family-base: sans-serif;
-$font-family-en: "Josefin Sans", sans-serif;
+// --------------------------------------------------------
+// 基本：ゴシック系フォント
+// 見出し：Noto Sans JP (Regular, Medium)
+// アイコン：Font Awesome
 
 // Colors
-$color-primary: #98a718;
-$color-black: #000000;
-$color-gray: #aaaaaa;
+// --------------------------------------------------------
+// Green-based: #eefbe3
+// Blue-based: #f0f9fe, #6abeeb, #16a6cb, #127791,
+// Black: #222222
+// White: #ffffff
+// Gray-based: #eeeeee, #cccccc, #888888, #555555, #444444
+// Red: c50a0a
+
+// 備考1
+// --------------------------------------------------------
+// 12分割のグリッド（モバイル版は4分割）
+// モバイル版の左右の余白30px
+// PC版の最大幅1088px
+
+// 備考2
+// --------------------------------------------------------
+// PC版の項目一覧は、必要に応じて「2カラム」「3カラム」「4カラム」変更可能にする
+// モバイル版は基本は「2カラム」、PC版が「3カラム」になる場合、1つ目の項目は2カラムを使って大きく表示する
+// 項目が増えたときは複数行にする（右→左→下段右→下段左）
+// ガター（項目の間隔）は全カラム共通
+// モバイル版（column-gap: 10px, row-gar: 20px）
+// PC版（column-gap: 16px, row-gar: 28px）
+
+// 備考3
+// --------------------------------------------------------
+// テキストの行の高さ（line-height: 1.5）説明文（タイトル下）だけ（line-height: 1.8）
+// テキストカラー（#222222）、濃淡のことなるグレーもある
+
+// 備考4
+// --------------------------------------------------------
+// Font Awesome: shopping-cart, tint, thermometer-half, sun
+
+// 備考5
+// --------------------------------------------------------
+// ヘッダーのディバイダーはShape Dividerを利用 https://www.shapedivider.app/
+// width: 134, height: 128, Top/bottom: Bottom
+
+// Top Page
+// Header
+// List Product category
+// List Experience
+// List Popular product
+// Footer
+
+// Contents Page
+// Header
+// Product Information
+// Popular product
+// Footer
+
+// Display
+// Mobile: 375*812
+// PC: 1366*768
+
+// Variables
+$font-family-base: sans-serif;
+$font-family-main: "Noto Sans JP", sans-serif;
+
+$color-blue-light: #f0f9fe;
+$color-blue-medium: #6abeeb;
+$color-blue-dark: #16a6cb;
+$color-blue-deep: #127791;
+
+$color-gray-light: #eeeeee;
+$color-gray-slightly: #cccccc;
+$color-gray-medium: #888888;
+$color-gray-dark: #555555;
+$color-gray-deep: #444444;
+
+$color-green: #eefbe3;
+$color-black: #222222;
 $color-white: #ffffff;
+$color-red: #c50a0a;

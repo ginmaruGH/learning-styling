@@ -1,8 +1,4 @@
 @use "./config/config" as v;
 @use "./components/base";
-@use "./components/navigation";
-@use "./components/sns";
-@use "./components/decoration";
-@use "./components/footer";
-@use "./components/contents";
+@use "./components/grid";
 @use "./components/index";

@@ -1,0 +1,58 @@
+@use "../config/config" as v;
+
+/* Grid setting */
+/* 12分割グリッド */
+/* Mobile-Grids: 4, PC-Grids: 12 */
+/* -------------------------------------------------------- */
+.grid12 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 16px;
+  }
+  > * {
+    grid-column: 1 / -1;
+  }
+}
+
+/* 12分割グリッド：カラム数 */
+.mobile-col-2 {
+  > * {
+    grid-column: span 2;
+  }
+  &.pc-col-3 > :first-child {
+    grid-column: span 4;
+  }
+}
+
+.pc-col-2 > * {
+  @media (min-width: 768px) {
+    grid-column: span 6;
+  }
+}
+
+.pc-col-3 > * {
+  @media (min-width: 768px) {
+    grid-column: span 4;
+  }
+}
+
+.pc-col-4 > * {
+  @media (min-width: 768px) {
+    grid-column: span 3;
+  }
+}
+
+/* Parts Grid */
+/* -------------------------------------------------------- */
+.parts-grid {
+  display: grid;
+  grid-template-columns: minmax(8vw, 1fr) minmax(auto, 1088px) minmax(8vw, 1fr);
+
+  > * {
+    grid-column: 2;
+  }
+}

@@ -1,0 +1,27 @@
+// Base Styling
+@use "./config/config" as v;
+
+/* Base */
+/* -------------------------------------------------------- */
+body {
+  font-family: v.$font-family-base;
+  line-height: 1.5;
+  color: v.$color-black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}

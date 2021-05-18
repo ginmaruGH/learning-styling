@@ -28,7 +28,7 @@ module.exports = {
       scriptLoading: "defer"
     }),
     new HtmlWebpackPlugin({
-      template: paths.src + "/pages/contents.pug",
+      template: paths.src + "/pages/content.pug",
       filename: "contents.html",
       scriptLoading: "defer"
     }),

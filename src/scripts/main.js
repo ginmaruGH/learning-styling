@@ -1,17 +1,15 @@
 import "@/styles/styles.scss"
+
 import "@/images/favicon32.png"
-import "@/images/tent-orange.jpg"
-import "@/images/camp-food.jpg"
-import "@/images/camp-sky.jpg"
-import "@/images/camp-fire.jpg"
-import "@/images/camp-table.jpg"
-import "@/images/tent.jpg"
-import "@/images/tent-green.jpg"
-import "@/images/fire.jpg"
-
-let click = document.getElementById("click")
-
-click.addEventListener("click", () => {
-  document.querySelector("html").classList.toggle("open")
-})
+import "@/images/plant.jpg"
+import "@/images/plant-bonsai.jpg"
+import "@/images/plant-preserved.jpg"
+import "@/images/plant-edible.jpg"
+import "@/images/exp-online.jpg"
+import "@/images/exp-subsc.jpg"
+import "@/images/exp-gift.jpg"
+import "@/images/item-a101.jpg"
+import "@/images/item-ea201.jpg"
+import "@/images/item-flower.jpg"
+import "@/images/item-b100.jpg"
 

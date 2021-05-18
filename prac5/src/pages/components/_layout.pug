@@ -1,0 +1,23 @@
+doctype html
+
+block vars
+
+html(lang="ja")
+
+  head
+    include ./_head.pug
+
+  body(class="page-grid")
+    main
+      //- Pages contents
+      block contents
+
+    include ./_navigation.pug
+
+    include ./_sns.pug
+
+    include ./_decoration.pug
+
+    include ./_footer.pug
+
+//- body::after(circled line)

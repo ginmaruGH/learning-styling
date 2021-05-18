@@ -1,0 +1,32 @@
+extends ./components/_layout.pug
+
+block vars
+  include ./config/_config.pug
+
+  - var key = "content"
+  - var page = {}
+
+  if key !== "top"
+    - page = pages[key]
+
+block contents
+
+  article(class="item")
+    h1 サボテンセット EA201
+      h3 水やり
+      h3 温度
+      h3 日当たり
+
+  section(class="list list-popular")
+    h2 人気の植物
+      h3 サボテン A101
+      h3 フラワーポット
+
+
+
+
+
+
+
+
+
