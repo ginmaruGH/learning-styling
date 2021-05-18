@@ -1,7 +1,11 @@
 //- Header
 header(class="header parts-grid")
   nav(class="header-nav grid12")
-    img(src="~@img/logo-blue.svg" alt="BOTA")
+    if (key == "top")
+      img(src="~@img/logo-blue.svg" alt="BOTA")
+    else
+      img(src="~@img/logo-gray.svg" alt="BOTA")
+
 
     ul
       li

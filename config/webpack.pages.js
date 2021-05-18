@@ -29,7 +29,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: paths.src + "/pages/content.pug",
-      filename: "contents.html",
+      filename: "content.html",
       scriptLoading: "defer"
     }),
   ]

@@ -49,6 +49,7 @@
 }
 
 /* Top-page Header */
+/* -------------------------------------------------------- */
 .top .header.parts-grid {
   background-image: url(~@img/illustration.jpg);
   background-size: cover;
@@ -111,5 +112,19 @@
   }
 }
 
+/* Content-page Header */
+/* -------------------------------------------------------- */
+.content {
+  .header.parts-grid {
 
+    .header-nav {
 
+      ul {
+        color: v.$color-gray-dark;
+      }
+      .cart {
+        color: v.$color-gray-dark;
+      }
+    }
+  }
+}

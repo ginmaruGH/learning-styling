@@ -21,6 +21,12 @@ HTML/CSS/SCSS/pug/webpackを使ってスタイリングを学ぶ
 |<img alt="Gatsby" src="./static/practice04-cover.webp" width="100"  alt="ebook4"/>|<img alt="Gatsby" src="./static/practice05-cover.webp" width="100"  alt="ebook5"/>|<img alt="Gatsby" src="./static/practice06-cover.webp" width="100"  alt="ebook6"/>|
 |Level 1|Level 2|Level 2|
 
+|eBook|
+|:---:|
+[コーディングプラクティス7](https://ep.ebisu.com/practice07/)|
+|Level 3|
+
+
 ## 目標
 
 - Pug/Sassの学習
