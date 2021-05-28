@@ -26,6 +26,14 @@ img {
   vertical-align: bottom;
 }
 
+button {
+  box-sizing: content-box;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+}
+
 /* スクリーンリーダー用テキスト */
 /* --------------------------------------------------------- */
 .sr-only {
@@ -37,4 +45,14 @@ img {
   height: 1px;
   margin: -1px;
   padding: 0;
+}
+
+.container {
+  width: 84%;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 91%;
+    max-width: 1240px;
+  }
 }

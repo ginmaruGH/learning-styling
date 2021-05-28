@@ -1,4 +1,54 @@
+//- Metadata by Pages
 
+- var title
+if (page.title)
+  - title = page.title + "|" + site.title
+else
+  - title = site.title
+
+-var keywords
+if (page.keywords)
+  - keywords = page.keywords
+else
+  - keywords = site.keywords
+
+- var description
+if (page.description)
+  - description = page.description
+else
+  - description = site.description
+
+- var url
+if (page.url)
+  - url = site.url + "/" + page.url
+else
+  - url = site.url
+
+- var title
+if (page.title)
+  - title = page.title + "|" + site.title
+else
+  - title = site.title
+
+- var imgUrl
+if (page.imgUrl)
+  - imgUrl = page.imgUrl
+else
+  - imgUrl = site.imgUrl
+
+- var imgWidth
+if (page.imgWidth)
+  - imgWidth = page.imgWidth
+else
+  - imgWidth = site.imgWidth
+
+- var imgHeight
+if (page.imgHeight)
+  - imgHeight = page.imgHeight
+else
+  - imgHeight = site.imgHeight
+
+//- Common Metadata
 meta(charset="UTF-8")
 meta(http-equiv="X-UA-Compatible", content="IE=edge")
 meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -7,8 +57,6 @@ meta(name="format-detection" content="telephone=no")
 base(href=site.url)
 link(rel="canonical" href=site.url)
 link(rel="icon" type="image/png" href=site.favicon)
-//- link(rel="icon" type="image/png" href="~@img/favicon32.png")
-//- link(rel="icon" href="~@img/favicon32.png")
 meta(property="og:type" content=site.type)
 meta(property="og:locale" content=site.locale)
 meta(property="og:site_name" content=site.title)
@@ -17,71 +65,17 @@ meta(name="twitter:site" content=site.social.twitterSite)
 meta(name="twitter:creator" content=site.social.twitterCreator)
 meta(name="twitter:card" content="summary_large_image")
 
-- var title
-if (page.title)
-  - title = page.title + "|" + site.title
-else
-  - title = site.title
-
+//- Metadata by pages
 title #{title}
-
--var keywords
-if (page.keywords)
-  - keywords = page.keywords
-else
-  - keywords = site.keywords
-
 meta(name="keywords" content=keywords)
-
-- var description
-if (page.description)
-  - description = page.description
-else
-  - description = site.description
-
 meta(name="description" content=description)
 meta(property="og:description" content=description)
 meta(name="twitter:description" content=description)
-
-- var url
-if (page.url)
-  - url = site.url + "/" + page.url
-else
-  - url = site.url
-
 meta(property="og:url" content=url)
-
-- var title
-if (page.title)
-  - title = page.title + "|" + site.title
-else
-  - title = site.title
-
 meta(property="og:title" content=title)
 meta(name="twitter:title" content=title)
-
-- var imgUrl
-if (page.imgUrl)
-  - imgUrl = page.imgUrl
-else
-  - imgUrl = site.imgUrl
-
 meta(property="og:image" content=imgUrl)
-
-- var imgWidth
-if (page.imgWidth)
-  - imgWidth = page.imgWidth
-else
-  - imgWidth = site.imgWidth
-
 meta(property="og:image:width" content=imgWidth)
-
-- var imgHeight
-if (page.imgHeight)
-  - imgHeight = page.imgHeight
-else
-  - imgHeight = site.imgHeight
-
 meta(property="og:image:height" content=imgHeight)
 
 //- Fonts

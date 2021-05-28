@@ -1,84 +1,29 @@
-// レスポンシブ
-// --------------------------------------------------------
-// breakpoint: 768px
+// Site Guidelines
 
-// Fonts
-// --------------------------------------------------------
-// 基本：ゴシック系フォント
-// 見出し：Noto Sans JP (Regular, Medium)
-// アイコン：Font Awesome
-
-// Colors
-// --------------------------------------------------------
-// Green-based: #eefbe3
-// Blue-based: #f0f9fe, #6abeeb, #16a6cb, #127791,
-// Black: #222222
-// White: #ffffff
-// Gray-based: #eeeeee, #cccccc, #888888, #555555, #444444
-// Red: c50a0a
+// フレキシブルボックス
+// Polyfill
+// Responsive
+// ページロード時はフェードイン
 
 // 備考1
-// --------------------------------------------------------
-// 12分割のグリッド（モバイル版は4分割）
-// モバイル版の左右の余白30px
-// PC版の最大幅1088px
+// リキッドレイアウト、横幅の最大値1240pxで固定
 
 // 備考2
-// --------------------------------------------------------
-// PC版の項目一覧は、必要に応じて「2カラム」「3カラム」「4カラム」変更可能にする
-// モバイル版は基本は「2カラム」、PC版が「3カラム」になる場合、1つ目の項目は2カラムを使って大きく表示する
-// 項目が増えたときは複数行にする（右→左→下段右→下段左）
-// ガター（項目の間隔）は全カラム共通
-// モバイル版（column-gap: 10px, row-gar: 20px）
-// PC版（column-gap: 16px, row-gar: 28px）
+// ナビゲーションメニューは
+// モバイル版はハンバーガーメニュー（右側からのフルスクリーンのオーバーレイ）
+// PC版は右上に表示
 
 // 備考3
-// --------------------------------------------------------
-// テキストの行の高さ（line-height: 1.5）説明文（タイトル下）だけ（line-height: 1.8）
-// テキストカラー（#222222）、濃淡のことなるグレーもある
 
-// 備考4
-// --------------------------------------------------------
-// Font Awesome: shopping-cart, tint, thermometer-half, sun
 
-// 備考5
-// --------------------------------------------------------
-// ヘッダーのディバイダーはShape Dividerを利用 https://www.shapedivider.app/
-// width: 134, height: 128, Top/bottom: Bottom
-
-// Top Page
-// Header
-// List Product category
-// List Experience
-// List Popular product
-// Footer
-
-// Contents Page
-// Header
-// Product Information
-// Popular product
-// Footer
-
-// Display
-// Mobile: 375*812
-// PC: 1366*768
-
-// Variables
-$font-family-base: sans-serif;
-$font-family-main: "Noto Sans JP", sans-serif;
-
-$color-blue-light: #f0f9fe;
-$color-blue-medium: #6abeeb;
-$color-blue-dark: #16a6cb;
-$color-blue-deep: #127791;
-
-$color-gray-light: #eeeeee;
-$color-gray-slightly: #cccccc;
-$color-gray-medium: #888888;
-$color-gray-dark: #555555;
-$color-gray-deep: #444444;
-
-$color-green: #eefbe3;
-$color-black: #222222;
+/* Variables */
+$font-family-base: 'Noto Sans JP', sans-serif;
+$color-primary: #2e5180;
+$color-darkgray: #333333;
+$color-middlegray: #707f89;
+$color-gray: #cdd6dd;
+$color-lightgray: #eef4f8;
 $color-white: #ffffff;
-$color-red: #c50a0a;
+$color-black: #333333;
+
+$max-width: 1240px;

@@ -12,12 +12,152 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/all */ "./node_modules/@fortawesome/fontawesome-free/js/all.js");
 /* harmony import */ var _fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_all__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/styles/styles.scss */ "./src/styles/styles.scss");
+/* harmony import */ var _images_favicon32_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/images/favicon32.png */ "./src/images/favicon32.png");
+/* harmony import */ var _images_plant_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/images/plant.jpg */ "./src/images/plant.jpg");
+/* harmony import */ var _images_plant_bonsai_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/images/plant-bonsai.jpg */ "./src/images/plant-bonsai.jpg");
+/* harmony import */ var _images_plant_preserved_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/images/plant-preserved.jpg */ "./src/images/plant-preserved.jpg");
+/* harmony import */ var _images_plant_edible_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/images/plant-edible.jpg */ "./src/images/plant-edible.jpg");
+/* harmony import */ var _images_exp_online_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/images/exp-online.jpg */ "./src/images/exp-online.jpg");
+/* harmony import */ var _images_exp_subsc_jpg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/images/exp-subsc.jpg */ "./src/images/exp-subsc.jpg");
+/* harmony import */ var _images_exp_gift_jpg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/images/exp-gift.jpg */ "./src/images/exp-gift.jpg");
+/* harmony import */ var _images_item_a101_jpg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/images/item-a101.jpg */ "./src/images/item-a101.jpg");
+/* harmony import */ var _images_item_ea201_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/images/item-ea201.jpg */ "./src/images/item-ea201.jpg");
+/* harmony import */ var _images_item_flower_jpg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/images/item-flower.jpg */ "./src/images/item-flower.jpg");
+/* harmony import */ var _images_item_b100_jpg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/images/item-b100.jpg */ "./src/images/item-b100.jpg");
 
 
-var click = document.getElementById("click");
-click.addEventListener("click", function () {
-  document.querySelector("html").classList.toggle("open");
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/images/exp-gift.jpg":
+/*!*********************************!*\
+  !*** ./src/images/exp-gift.jpg ***!
+  \*********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/exp-gift.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/exp-online.jpg":
+/*!***********************************!*\
+  !*** ./src/images/exp-online.jpg ***!
+  \***********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/exp-online.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/exp-subsc.jpg":
+/*!**********************************!*\
+  !*** ./src/images/exp-subsc.jpg ***!
+  \**********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/exp-subsc.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/favicon32.png":
+/*!**********************************!*\
+  !*** ./src/images/favicon32.png ***!
+  \**********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/favicon32.bundle.png";
+
+/***/ }),
+
+/***/ "./src/images/item-a101.jpg":
+/*!**********************************!*\
+  !*** ./src/images/item-a101.jpg ***!
+  \**********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/item-a101.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/item-b100.jpg":
+/*!**********************************!*\
+  !*** ./src/images/item-b100.jpg ***!
+  \**********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/item-b100.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/item-ea201.jpg":
+/*!***********************************!*\
+  !*** ./src/images/item-ea201.jpg ***!
+  \***********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/item-ea201.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/item-flower.jpg":
+/*!************************************!*\
+  !*** ./src/images/item-flower.jpg ***!
+  \************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/item-flower.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/plant-bonsai.jpg":
+/*!*************************************!*\
+  !*** ./src/images/plant-bonsai.jpg ***!
+  \*************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/plant-bonsai.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/plant-edible.jpg":
+/*!*************************************!*\
+  !*** ./src/images/plant-edible.jpg ***!
+  \*************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/plant-edible.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/plant-preserved.jpg":
+/*!****************************************!*\
+  !*** ./src/images/plant-preserved.jpg ***!
+  \****************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/plant-preserved.bundle.jpg";
+
+/***/ }),
+
+/***/ "./src/images/plant.jpg":
+/*!******************************!*\
+  !*** ./src/images/plant.jpg ***!
+  \******************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/plant.bundle.jpg";
 
 /***/ }),
 
@@ -31,7 +171,7 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
     if(true) {
-      // 1622210989043
+      // 1621379926526
       var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {"locals":false});
       module.hot.dispose(cssReload);
       module.hot.accept(undefined, cssReload);
@@ -167,7 +307,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "66d8763f8b9f8f6243ac"; }
+/******/ 		__webpack_require__.h = function() { return "121d80b232afc0cc96bf"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

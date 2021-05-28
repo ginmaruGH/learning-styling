@@ -27,10 +27,10 @@ module.exports = {
       filename: "index.html",
       scriptLoading: "defer"
     }),
-    new HtmlWebpackPlugin({
-      template: paths.src + "/pages/content.pug",
-      filename: "content.html",
-      scriptLoading: "defer"
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: paths.src + "/pages/content.pug",
+    //   filename: "content.html",
+    //   scriptLoading: "defer"
+    // }),
   ]
 }
