@@ -10,7 +10,7 @@
   background-size: cover;
   display: flex;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     height: 700px;
   }
 
@@ -20,7 +20,7 @@
     padding: 33px 0;
     background-color: rgba($color: #ffffff, $alpha: 0.75);
 
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       padding: 47px 0 44px;
     }
   }
@@ -40,7 +40,7 @@
     color: v.$color-primary;
     margin-bottom: 15px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       font-size: 16px;
       margin-bottom: 22px;
     }
@@ -53,7 +53,7 @@
   color: v.$color-white;
   padding: 67px 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     padding: 81px 0;
   }
 
@@ -63,7 +63,7 @@
     text-align: center;
     margin-bottom: 38px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       font-size: 36px;
       line-height: 1.33;
     }
@@ -80,4 +80,195 @@
 /* Service */
 .service {
   padding: 67px 0;
+  text-align: center;
+
+  @media (min-width: 900px) {
+    padding: 95px 0 87px;
+
+  }
+
+  h2 {
+    display: inline-block;
+    font-size: 24px;
+    color: v.$color-primary;
+    border-bottom: 2px dotted currentColor;
+    padding-bottom: 9px;
+    margin-bottom: 16px;
+
+    @media (min-width: 900px) {
+      font-size: 36px;
+    }
+
+    & + p {
+      font-size: 16px;
+      color: v.$color-primary;
+    }
+  }
+}
+
+/* Service: Details */
+.details {
+  color: v.$color-black;
+  margin-top: 53px;
+
+  @media (min-width: 900px) {
+    display: flex;
+    margin-top: 75px;
+  }
+
+  .detail {
+    @media (min-width: 900px) {
+      flex: 1;
+      margin-right: 3.22%;
+      display: flex;
+      flex-direction: column;
+
+      .btn {
+        margin-top: auto;
+      }
+    }
+    &:first-child {
+      @media (min-width: 900px) {
+        margin-left: 3.22%;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 67px;
+
+      @media (min-width: 900px) {
+        margin-bottom: 0;
+      }
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 1.75;
+      margin-bottom: 17px;
+
+      @media (min-width: 900px) {
+        font-size: 30px;
+        line-height: 1.4;
+        margin-bottom: 26px;
+      }
+    }
+    p {
+      max-width: 264px;
+      margin: 0 auto 25px;
+      font-size: 12px;
+      line-height: 2;
+
+      @media (min-width: 900px) {
+        width: 78%;
+        max-width: none;
+      }
+    }
+    figure {
+      height: 246px;
+      margin-bottom: 22px;
+      background-position: center;
+      background-size: cover;
+
+      @media (min-width: 900px) {
+        height: 360px;
+        margin-bottom: 33px;
+      }
+    }
+    &.office figure {
+      background-image: url(~@img/office.jpg);
+    }
+    &.management figure {
+      background-image: url(~@img/manage.jpg);
+    }
+    &.research figure {
+      background-image: url(~@img/research.jpg);
+    }
+  }
+}
+
+/* Contact */
+.contact {
+  background-color: v.$color-lightgray;
+  padding: 62px 0;
+  color: v.$color-black;
+
+  @media (min-width: 900px) {
+    background: none;
+    padding: 0;
+  }
+  .container {
+    @media (min-width: 900px) {
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      background-color: v.$color-lightgray;
+      padding: 96px 9% 62px;
+
+      .text {
+        flex: 0 0 auto;
+      }
+      .form {
+        flex: 1 1 auto;
+        max-width: 457px;
+        margin-left: 1em;
+        margin-top: 0;
+      }
+    }
+  }
+  h2 {
+    font-size: 24px;
+    margin-bottom: 42px;
+
+    @media (min-width: 900px) {
+      font-size: 36px;
+    }
+
+    & + p {
+      font-size: 12px;
+      line-height: 2.17;
+
+      @media (min-width: 900px) {
+        font-size: 14px;
+        line-height: 1.85;
+      }
+    }
+  }
+}
+
+/* Contact: Form */
+.form {
+  margin-top: 46px;
+
+  &::placeholder {
+    color: v.$color-gray;
+    opacity: 1;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 17px;
+    padding: 12px 20px 14px;
+    border: 1px solid v.$color-gray;
+    border-radius: 0;
+    -webkit-appearance: none;
+    font-family: v.$font-family-base;
+    font-size: 16px;
+    color: v.$color-black;
+  }
+  textarea {
+    height: 150px;
+  }
+  .btn {
+    width: 100%;
+    margin: 0;
+    border: none;
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    @media (min-width: 900px) {
+      width: 272px;
+    }
+  }
 }

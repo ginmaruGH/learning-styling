@@ -6,8 +6,15 @@
   background-color: v.$color-primary;
   padding: 38px 0 56px;
 
+   @media (min-width: 900px) {
+     margin-top: -48px;
+     padding: 105px 0 88px;
+     position: relative;
+     z-index: -1;
+   }
+
   .container {
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       display: flex;
       justify-content: space-between;
     }
@@ -21,7 +28,7 @@
       width: 47px;
       margin-right: 14px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 900px) {
         width: 59px;
         margin-right: 18px;
       }
@@ -32,7 +39,7 @@
         color: v.$color-white;
         font-size: 16px;
 
-        @media (min-width: 768px) {
+        @media (min-width: 900px) {
           font-size: 20px;
         }
       }
@@ -44,7 +51,7 @@
     line-height: 2;
     margin: 20px 0 36px 61px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       margin: 22px 0 0 77px;
     }
   }
@@ -53,7 +60,7 @@
     align-items: center;
     margin-left: 61px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 900px) {
       height: 59px;
     }
 

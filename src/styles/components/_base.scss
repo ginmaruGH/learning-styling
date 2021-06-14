@@ -52,8 +52,37 @@ button {
   width: 84%;
   margin: 0 auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: 900px) {
     width: 91%;
     max-width: 1240px;
+  }
+}
+
+/* Button */
+.btn {
+  display: block;
+  box-sizing: border-box;
+  width: 208px;
+  margin: 0 auto;
+  padding: 11px 0 13px;
+  border: 2px solid currentColor;
+  border-radius: 24px;
+  color: v.$color-primary;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Fade-in */
+body {
+  animation: fade 5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
